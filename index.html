@@ -606,7 +606,6 @@ $(document).ready(function () {
         updateLoadMoreVisibility(); // Update button visibility after resize
     });
 
-    // Function to populate filter dropdowns based on jobs
     function populateFilters() {
         const locationSet = new Set();
         const jobTypeSet = new Set();
@@ -623,24 +622,21 @@ $(document).ready(function () {
             }
         });
 
-        // Populate location filter
         $('#locationFilter').html('<option value="All">Alle steder</option>');
         locationSet.forEach(location => {
             $('#locationFilter').append(`<option value="${location}">${location}</option>`);
         });
 
-        // Populate job type filter
-        $('#jobTypeFilter').html('<option value="All">Alla stillingstyper</option>');
+        $('#jobTypeFilter').html('<option value="All">Alle stillingstyper</option>');
         jobTypeSet.forEach(type => {
             $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
         });
     }
 
-    // Function to display jobs based on filters
     function displayJobs() {
-        $('#jobList').empty(); // Clear current jobs
+        $('#jobList').empty();
 
-        let filteredJobs = jobs.slice(0, displayedJobs); // Get the subset of jobs to be displayed
+        let filteredJobs = jobs.slice(0, displayedJobs);
 
         const selectedCountry = $('#locationFilter').val();
         const selectedJobType = $('#jobTypeFilter').val();
@@ -651,6 +647,10 @@ $(document).ready(function () {
                    (selectedJobType === 'All' || job.occupation_area === selectedJobType);
         });
 
+        if (filteredJobs.length === 0) {
+            $('#jobList').append('<div class="text-center w-100">Det er for tiden ingen ledige stillinger publisert.</div>');
+        }
+
         filteredJobs.forEach(job => {
             $('#jobList').append(buildJobCard(job));
         });
@@ -658,13 +658,12 @@ $(document).ready(function () {
         updateLoadMoreVisibility();
     }
 
-    // Function to build HTML for a job card
     function buildJobCard(job) {
         const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
         const organizationUnitName = job.organizations && job.organizations.length > 1 
             ? job.organizations[1].nameorgunit 
             : job.organizations?.[0]?.nameorgunit || 'Not specified';
-        const category = job.occupation_area || 'A2G'; // Use occupation_area or default to 'A2G'
+        const category = job.occupation_area || 'A2G';
 
         return `
         <div class="col-12 col-md-4 col-lg-4 mb-4">
@@ -683,34 +682,30 @@ $(document).ready(function () {
         </div>`;
     }
 
-    // Function to update the visibility of the "Load More" button
     function updateLoadMoreVisibility() {
-        if (displayedJobs >= jobs.length) {
+        if (displayedJobs >= jobs.length || jobs.length === 0) {
             $('#loadMore').hide();
         } else {
             $('#loadMore').show();
         }
     }
 
-    // Function to fetch jobs from the API
     function fetchJobs() {
         fetch('https://api.talentech.io/reachmee/feed/a2g')
             .then(response => response.json())
             .then(data => {
-                jobs = data; // Store fetched jobs
-                displayedJobs = Math.min(jobsToShow, jobs.length); // Initialize displayedJobs
-                populateFilters(); // Fill dropdowns with options
-                displayJobs(); // Show initial jobs
+                jobs = data;
+                displayedJobs = Math.min(jobsToShow, jobs.length);
+                populateFilters();
+                displayJobs();
             })
             .catch(error => {
                 console.error('Error fetching jobs:', error);
             });
     }
 
-    // Load jobs when page is ready
     fetchJobs();
 
-    // Event listeners for "Load More" button and filter dropdowns
     $('#loadMore').click(function() {
         displayedJobs += jobsToShow;
         displayJobs();
@@ -730,6 +725,7 @@ $(document).ready(function () {
     });
 });
 </script>
+
 
 
 
