@@ -57,7 +57,16 @@
 }
 body, div, p, span, ul, li, ol, h1, h2, h3, h4, h5, h6 {
 	font-family: Inter, arial, sans-serif;
+}
+body {
 	color: #4c505b;
+}
+h2 {
+    font-weight: 700;
+}
+a {
+    color: #2f3c66;
+    font-weight: 500;
 }
 .title-alt {
 	color: #752864;
@@ -66,13 +75,19 @@ body, div, p, span, ul, li, ol, h1, h2, h3, h4, h5, h6 {
 	visibility: inherit;
 }
 .bg-dark {
-	background-color: #005560 !important;
+	background-color: #2f3c66 !important;
+}
+.bg-dark p {
+	color: #fff;
 }
 .carousel-indicators {
 	bottom: 30px;
 }
 .dark-btn {
 	background: #2f3c66 !important;
+}
+.btn-group-lg>.btn, .btn-lg {
+    font-size: 1rem;
 }
 .hero-section {
 	position: relative;
@@ -129,7 +144,7 @@ body, div, p, span, ul, li, ol, h1, h2, h3, h4, h5, h6 {
 	flex-wrap: wrap;
 }
 .talentech-section h2 {
-	font-size: 2rem;
+	font-size: 3rem;
 }
 .job-listing {
 	margin-bottom: 20px;
@@ -392,7 +407,7 @@ h2 {
 	font-size: 2rem;
 }
 .benefit-content {
-	background-color: rgb(233, 243, 230);
+	background-color: #f8f9fa;
 	border-radius: 4px;
 }
 .process-content p {
@@ -487,7 +502,7 @@ h4 {
 	position: relative;
 	margin-bottom: -50px;
 	background-color: #005560;
-	color: rgb(233, 243, 230);
+	color: #f8f9fa;
 	border-radius: 50%;
 	width: 100px;
 	height: 120px;
@@ -537,11 +552,11 @@ h4 {
 	padding: 1.75rem;
 }
 #loadMore {
-	font-weight: 800;
+	font-weight: 600;
 }
 .rounded-video {
 	width: 100%;
-	border-radius: 15px;
+	border-radius: 4px;
 	overflow: hidden;
 }
 .gobi-stories-container {
