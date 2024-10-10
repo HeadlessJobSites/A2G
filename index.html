@@ -598,35 +598,30 @@ $(document).ready(function () {
     const jobsToShowMobile = 6; // Number of jobs to show on mobile before "Load More"
     let jobsToShow = window.innerWidth > 768 ? jobsToShowDesktop : jobsToShowMobile;
 
-    // Adjust jobsToShow based on window resize
     $(window).resize(function() {
         jobsToShow = window.innerWidth > 768 ? jobsToShowDesktop : jobsToShowMobile;
-        displayedJobs = Math.min(jobsToShow, jobs.length); // Adjust displayedJobs based on new jobsToShow
-        displayJobs(); // Redisplay jobs based on new size
-        updateLoadMoreVisibility(); // Update button visibility after resize
+        displayedJobs = Math.min(jobsToShow, jobs.length);
+        displayJobs();
+        updateLoadMoreVisibility();
     });
 
     function populateFilters() {
         const locationSet = new Set();
         const jobTypeSet = new Set();
-
         jobs.forEach(job => {
             if (job.areas && job.areas.length > 0) {
                 job.areas.forEach(area => locationSet.add(area.name));
             } else if (job.country) {
                 locationSet.add(job.country);
             }
-
             if (job.occupation_area) {
                 jobTypeSet.add(job.occupation_area);
             }
         });
-
         $('#locationFilter').html('<option value="All">Alle steder</option>');
         locationSet.forEach(location => {
             $('#locationFilter').append(`<option value="${location}">${location}</option>`);
         });
-
         $('#jobTypeFilter').html('<option value="All">Alle stillingstyper</option>');
         jobTypeSet.forEach(type => {
             $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
@@ -635,46 +630,35 @@ $(document).ready(function () {
 
     function displayJobs() {
         $('#jobList').empty();
-
         let filteredJobs = jobs.slice(0, displayedJobs);
-
         const selectedCountry = $('#locationFilter').val();
         const selectedJobType = $('#jobTypeFilter').val();
-
         filteredJobs = filteredJobs.filter(job => {
             const jobLocations = job.areas?.map(area => area.name) || [job.country];
             return (selectedCountry === 'All' || jobLocations.includes(selectedCountry)) &&
                    (selectedJobType === 'All' || job.occupation_area === selectedJobType);
         });
-
         if (filteredJobs.length === 0) {
             $('#jobList').append('<div class="text-center w-100">Det er for tiden ingen ledige stillinger publisert.</div>');
         }
-
         filteredJobs.forEach(job => {
             $('#jobList').append(buildJobCard(job));
         });
-
         updateLoadMoreVisibility();
     }
 
     function buildJobCard(job) {
         const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
-        const organizationUnitName = job.organizations && job.organizations.length > 1 
-            ? job.organizations[1].nameorgunit 
-            : job.organizations?.[0]?.nameorgunit || 'Not specified';
-        const category = job.occupation_area || 'A2G';
-
         return `
         <div class="col-12 col-md-4 col-lg-4 mb-4">
             <a href="${jobDetailUrl}" class="" style="text-decoration: none; color: inherit;" aria-label="Job details">
                 <div class="card h-100">
                     <div class="card-body">
-                        <div class="card-category"><span>${category}</span></div>
+                        <div class="card-category"><span>${job.occupation_area || 'A2G'}</span></div>
                         <div class="card-title">${job.title}</div>
                         <p class="card-text">${job.country}</p>
                         <a href="${jobDetailUrl}" class="stretched-link">
-                            <img src="./files/arrow-right-thin.svg" class="stretched-link" alt="Details" style="">
+                            <img src="./files/arrow-right-thin.svg" class="stretched-link" alt="Details">
                         </a>
                     </div>
                 </div>
@@ -694,13 +678,19 @@ $(document).ready(function () {
         fetch('https://api.talentech.io/reachmee/feed/a2g')
             .then(response => response.json())
             .then(data => {
-                jobs = data;
+                if (data.message && data.message === "ObjectNotFoundException") {
+                    jobs = [];
+                } else {
+                    jobs = data;
+                }
                 displayedJobs = Math.min(jobsToShow, jobs.length);
                 populateFilters();
                 displayJobs();
             })
             .catch(error => {
                 console.error('Error fetching jobs:', error);
+                jobs = [];
+                displayJobs();
             });
     }
 
