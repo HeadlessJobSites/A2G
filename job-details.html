@@ -644,90 +644,87 @@ $(document).ready(function () {
     const jobsToShowMobile = 6; // Number of jobs to show on mobile before "Load More"
     let jobsToShow = window.innerWidth > 768 ? jobsToShowDesktop : jobsToShowMobile;
 
-    // Adjust jobsToShow based on window resize
     $(window).resize(function() {
         jobsToShow = window.innerWidth > 768 ? jobsToShowDesktop : jobsToShowMobile;
-        displayedJobs = Math.min(jobsToShow, jobs.length); // Adjust displayedJobs based on new jobsToShow
-        displayJobs(); // Redisplay jobs based on new size
-        updateLoadMoreVisibility(); // Update button visibility after resize
+        displayedJobs = Math.min(jobsToShow, jobs.length);
+        displayJobs();
+        updateLoadMoreVisibility();
     });
 
-    // Fetch jobs from the API, filtering out the current job
     function fetchJobs() {
         const currentJobId = new URLSearchParams(window.location.search).get('jobId');
         fetch('https://api.talentech.io/reachmee/feed/a2g')
             .then(response => response.json())
             .then(data => {
-                jobs = data.filter(job => job.ad_id.toString() !== currentJobId); // Filter out the current job
+                if (data.message && data.message === "ObjectNotFoundException" || !Array.isArray(data)) {
+                    jobs = [];
+                } else {
+                    jobs = data.filter(job => job.ad_id.toString() !== currentJobId); // Exclude the current job from the list
+                }
                 displayedJobs = Math.min(jobsToShow, jobs.length);
-                populateFilters(); // Fill dropdowns with options
-                displayJobs(); // Show initial jobs
+                populateFilters();
+                displayJobs();
             })
             .catch(error => {
                 console.error('Error fetching jobs:', error);
+                jobs = [];
+                displayJobs();
             });
     }
 
-    // Populate filter dropdowns based on jobs
     function populateFilters() {
         const locationSet = new Set();
         const jobTypeSet = new Set();
-
         jobs.forEach(job => {
             if (job.areas && job.areas.length > 0) {
                 job.areas.forEach(area => locationSet.add(area.name));
             } else if (job.country) {
                 locationSet.add(job.country);
             }
-
             if (job.occupation_area) {
                 jobTypeSet.add(job.occupation_area);
             }
         });
-
-        // Populate location filter
-        $('#locationFilter').empty().append('<option value="All">Alla platser</option>');
+        $('#locationFilter').empty().append('<option value="All">Alle steder</option>');
         locationSet.forEach(location => {
             $('#locationFilter').append(`<option value="${location}">${location}</option>`);
         });
-
-        // Populate job type filter
-        $('#jobTypeFilter').empty().append('<option value="All">Alla typer av jobb</option>');
+        $('#jobTypeFilter').empty().append('<option value="All">Alle stillingstyper</option>');
         jobTypeSet.forEach(type => {
             $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
         });
     }
 
-    // Display jobs based on filters
     function displayJobs() {
         $('#jobList').empty();
         let filteredJobs = jobs.slice(0, displayedJobs);
-
         const selectedLocation = $('#locationFilter').val();
         const selectedJobType = $('#jobTypeFilter').val();
-
         filteredJobs = filteredJobs.filter(job => {
             const jobLocations = job.areas?.map(area => area.name) || [job.country];
             return (selectedLocation === 'All' || jobLocations.includes(selectedLocation)) &&
                    (selectedJobType === 'All' || job.occupation_area === selectedJobType);
         });
 
-        filteredJobs.forEach(job => {
-            $('#jobList').append(buildJobCard(job));
-        });
-
+        if (filteredJobs.length === 0) {
+            $('#jobList').append('<div class="text-center w-100">Det er for tiden ingen liknande jobber tilgjengelig.</div>');
+        } else {
+            filteredJobs.forEach(job => {
+                $('#jobList').append(buildJobCard(job));
+            });
+        }
         updateLoadMoreVisibility();
     }
 
-    // Build HTML for a job card
     function buildJobCard(job) {
         const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
         return `
             <div class="col-12 col-md-4 col-lg-4 mb-4">
-                <a href="${jobDetailUrl}" class="text-decoration-none text-dark">
+                <a href="${jobDetailUrl}" class="" style="text-decoration: none; color: inherit;">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">${job.title}</h5>
+                            <div class="card-category"><span>${job.occupation_area || 'Ikke spesifisert'}</span></div>
+                            <div class="card-title">${job.title}</div>
                             <p class="card-text">${job.country}</p>
                         </div>
                     </div>
@@ -735,31 +732,24 @@ $(document).ready(function () {
             </div>`;
     }
 
-    // Update the visibility of the "Load More" button
     function updateLoadMoreVisibility() {
-        if (displayedJobs >= jobs.length) {
+        if (displayedJobs >= jobs.length || jobs.length === 0) {
             $('#loadMore').hide();
         } else {
             $('#loadMore').show();
         }
     }
 
-    // Load jobs when page is ready
     fetchJobs();
 
-    // Event listeners for "Load More" button and filter dropdowns
     $('#loadMore').click(function() {
         displayedJobs += jobsToShow;
         displayJobs();
+        updateLoadMoreVisibility();
     });
-    $('#locationFilter').change(function() {
-        displayedJobs = jobsToShow;
-        displayJobs();
-    });
-    $('#jobTypeFilter').change(function() {
-        displayedJobs = jobsToShow;
-        displayJobs();
-    });
+
+    $('#locationFilter').change(displayJobs);
+    $('#jobTypeFilter').change(displayJobs);
 });
 </script>
 
