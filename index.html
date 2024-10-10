@@ -20,13 +20,13 @@
 <script src="https://widget.gobistories.com/gwi/6" async onload="gobi.discover()"></script>
 
 	
-  <meta property="og:title" content="Wistrand karriärportal">
-  <meta property="og:description" content="Vi söker nya perspektiv - add you.">
+  <meta property="og:title" content="A2G - Ledige stillinger">
+  <meta property="og:description" content="Velkommen til A2G sin karriereportal.">
   <meta property="og:image" content="https://github.com/HeadlessJobSites/Wistrand/blob/main/files/CMS-Wistrand-social.jpg?raw=true">
   <meta property="og:url" content="https://headlessjobsites.github.io/A2G">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Wistrand karriärportal">
-  <meta name="twitter:description" content="Vi söker nya perspektiv - add you.">
+  <meta name="twitter:title" content="A2G - Ledige stillinger">
+  <meta name="twitter:description" content="Velkommen til A2G sin karriereportal.">
   <meta name="twitter:image" content="https://github.com/HeadlessJobSites/Wistrand/blob/main/files/CMS-Wistrand-social.jpg?raw=true">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -49,19 +49,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./#jobs-anchor">Jobb</a>
+                    <a class="nav-link" href="./#jobs-anchor">Stillinger</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./#meet-employees">Träffa de anställda</a>
+                    <a class="nav-link" href="./#meet-employees">Møt de ansatte</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="./#our-process">Rekrutteringsprosess</a>
+                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://web106.reachmee.com/ext/I002/223/profile?site=5&validator=9ca234355a394a0d99f3c6ffc02745f1&lang=NO">Logg inn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./#our-process">Rekryteringsprocess</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://web106.reachmee.com/ext/I002/233/profile?site=5&validator=b026c105ea4a83b928726cb7cb18488c&lang=SE">Logga in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="blank" href="https://cms.law/sv/swe/">cms.law <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" target="blank" href="https://a2g.no/">a2g.no <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -95,12 +95,12 @@ $(document).ready(function() {
 
 	<div class="hero-section">
     <div class="custom-hero"></div>
-    <video playsinline autoplay loop muted class="hero-video">
-        <source src="/Wistrand/files/CMS-webfilm.mp4" type="video/mp4">
-    </video>
+    <!--<video playsinline autoplay loop muted class="hero-video">
+        <source src="/A2G/files/a2g_velferdsstaten.mp4" type="video/mp4">
+    </video>-->
     <div class="hero-content">
-        <h1>Vi söker nya perspektiv - add you.</h1>
-        <a href="#jobs-anchor" class="btn btn-primary btn-lg dark-btn"><strong>Se våra lediga tjänster</strong></a>
+        <h1>Jobb hos oss!</h1>
+        <a href="#jobs-anchor" class="btn btn-primary btn-lg dark-btn"><strong>Se ledige stillinger</strong></a>
     </div>
 	</div>
 
@@ -112,13 +112,13 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(jobs => {
       const positionsCount = jobs.length; // Get the count of jobs from the feed
-      const btnText = positionsCount === 1 ? 'Se 1 ledig jobb' : `Se våra ${positionsCount} lediga tjänster`; // Update button text based on count
-      document.querySelector('a.btn.btn-primary.btn-lg strong').textContent = positionsCount > 0 ? btnText : 'Se lediga jobb';
+      const btnText = positionsCount === 1 ? 'Se 1 ledig stilling' : `Se ${positionsCount} ledige stillinger`; // Update button text based on count
+      document.querySelector('a.btn.btn-primary.btn-lg strong').textContent = positionsCount > 0 ? btnText : 'Se ledige stillinger';
     })
     .catch(error => {
       console.error('Error fetching job details:', error);
       // If there is an error fetching the jobs, show default text
-      document.querySelector('a.btn.btn-primary.btn-lg strong').textContent = 'Se våra lediga tjänstar';
+      document.querySelector('a.btn.btn-primary.btn-lg strong').textContent = 'Se ledige stillinger';
     });
 });
 </script>
@@ -136,8 +136,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	<div class="talentech-section" id="company-section">
     <div class="container mt-5 pt-4 m-mt-2">
-        <h2 class="m-px-2">Välkommen till <span style="font-weight: 800;">CMS Wistrand</span></h2>
-        <p class="pt-3 m-px-2">CMS Wistrand är en av Sveriges ledande affärsjuridiska byråer. På våra kontor i Stockholm och Göteborg är vi drygt 200 medarbetare – och som en del av CMS är vi en av världens största advokatbyråer med mer än 5 800 juridiska experter i över 45 länder. Lockas du av att lösa komplexa problem som ställer krav på innovation, expertis och samarbete? Vill du dessutom arbeta i en internationell miljö och värdesätter en öppen och inkluderande arbetsplats – då är CMS Wistrand rätt för dig.</p>
+        <h2 class="m-px-2">Velkommen til <span style="font-weight: 800;">A2G</span></h2>
+        <p class="pt-3 m-px-2">A2G er en er en ledende aktør innen arbeidsinkludering i Norge. Vi samarbeider tett med NAV med et klart samfunnsoppdrag: å redusere utenforskap og skape et arbeidsliv som har plass til alle.</p>
+        <p class="pt-3 m-px-2">I A2G er hver dag en ny mulighet til å gjøre en forskjell! Vi er ikke bare kolleger, men en del av et fellesskap som bryr seg om hverandre og om de vi hjelper. Hver <a href="https://eur06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fvimeo.com%2Fmanage%2Fvideos%2F961061451&data=05%7C02%7Chenrik.moberg%40talentech.com%7C1ce5be9e3b2c420fdd2a08dce8569173%7C2e9160ba07674fe88d0cac9cc7cfa862%7C0%7C0%7C638640705719653016%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=8KnD0XIJ2WdleoCHabn0JpASVxrXjTl69IRcvtmZ9LM%3D&reserved=0" target="_blank">suksesshistorie</a> fra mennesker vi lykkes med, gir en bekreftelse på at arbeidet vårt har betydning. Å jobbe i A2G er ikke bare en jobb; det er en mulighet til å være en del av et arbeidsmiljø som virkelig gjør en forskjell.</p>
     </div>
 </div>
 
@@ -145,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<!-- DISABLE VIDEO CONTROLS
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('talentechVideo');
@@ -193,12 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
--->
 
 <div class="talentech-section mb-5 m-mb-3">
     <div class="container mt-4 pt-2 mb-5 pb-3 video-container m-my-0">
         <video id="talentechVideo" class="rounded-video" playsinline autoplay loop muted>
-            <source src="/A2G/files/ADD_film.mp4" type="video/mp4">
+            <source src="/A2G/files/a2g_velferdsstaten.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video><!--
         <div class="video-controls">
@@ -213,8 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-        <h2 class="container pt-5 mt-5 m-my-0 m-px-4 m-pb-0">Våra <span style="font-weight: 800;">värderingar</span></h2>
+<!-- DISABLE VALUES SECTION 
+        <h2 class="container pt-5 mt-5 m-my-0 m-px-4 m-pb-0">Våre <span style="font-weight: 800;">verdier</span></h2>
 	<div id="teamCarousel" class="carousel slide" data-interval="false">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -243,16 +242,15 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 </div>
-
+-->
 
 
 
 
 	
 
-<!-- GOBI VIDEOER MIDLERTIDIG DEAKTIVERT
 <section class="team-section my-2 mt-5 py-5 m-pt-3 m-mb-0 m-mt-5" id="meet-the-team" style="background-color: rgb(233, 243, 230);">
-        <h2 class="container pt-5 mb-0 pb-0 m-px-4">Møt folka hos <span style="font-weight: 800;">NAF</span></h2>
+        <h2 class="container pt-5 mb-0 pb-0 m-px-4">Møt teamet hos <span style="font-weight: 800;">A2G</span></h2>
     <div class="container mt-0 pt-2">
         <div class="row mt-3 m-mt-2 m-mx-1">
 		    <script src="https://widget.gobistories.com/gwi/6" async onload="gobi.discover()"></script>
@@ -261,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		    
     </div>
 </section>
--->
 
 
 
@@ -271,10 +268,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+<!-- DISABLE TESTIMONIALS TEMPORARILY
 <div class="feature-section members" id="meet-employees" style="">
     <div class="container py-5 m-py-0">
-        <h2 class="pt-5 m-px-2">Fyra röster om <span style="font-weight: 800;">CMS Wistrand</span></h2>
+        <h2 class="pt-5 m-px-2">Bli kjent med <span style="font-weight: 800;">våre ansatte</span></h2>
         <div class="row align-items-top mt-5 mb-5 pb-3 flex-lg-row m-mt-4 m-mb-0"> <!-- Changes for mobile first -->
             <div class="col-lg-6">
                 <div class="background-image rounded-image m-mb-0" style="background-image: url('./files/Nina_A1082708.jpg');"></div>
@@ -324,6 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     </div>
 </div>
+-->
 
 
 
@@ -331,8 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-	
+<!-- DISABLE QUOTE	
 <div class="quote-section py-5">
     <div class="container py-5 mt-3 m-py-2">
         <blockquote class="blockquote text-center">
@@ -341,28 +338,26 @@ document.addEventListener('DOMContentLoaded', () => {
         </blockquote>
     </div>
 </div>
+-->
 
 
 
-
-
+<!-- DISABLE PROCESS
 <section id="our-process" class="process-section pt-5 m-my-0 m-pt-0 m-pb-4" style="background-color: #eeeef2;">
     <div class="container pt-5 m-px-4 m-pb-2">
         <h2>Vår <span style="font-weight: 800;">rekryterings&shy;process</span></h2>
     </div>
     <div class="container">
         <div class="row">
-<!-- DISABLE GOBI VIDEO
+
             <div class="col-md-4 px-0">
 <script src="https://widget.gobistories.com/gwi/6" async onload="gobi.discover()"></script>
 
 <div class="gobi-collection" data-gobi-collection-id="j2jom"></div>
             </div>
--->
-            <!-- Existing Content in Right Column -->
-            <div class="col-md-12 pl-5 m-px-4">
+
+            <div class="col-md-8 pl-5 m-px-4">
                 <div class="row process-row">
-                    <!-- Benefit 1 -->
                     <div class="col-md-4 col-sm-4 process-item">
                         <div class="process-icon">
                             <h3>1</h3>
@@ -372,7 +367,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>Du ansöker genom att ladda upp CV och andra relevanta ansökningshandlingar i vår karriärportal.</p>
                         </div>
                     </div>
-                    <!-- Benefit 2 -->
                     <div class="col-md-4 col-sm-4 process-item">
                         <div class="process-icon">
                             <h3>2</>
@@ -382,7 +376,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>Vi går igenom din ansökan och ser om dina kunskaper, erfarenheter och kompetenser stämmer överens med det vi söker.</p>
                         </div>
                     </div>
-                    <!-- Benefit 3 -->
                     <div class="col-md-4 col-sm-4 process-item">
                         <div class="process-icon">
                             <h3>3</h3>
@@ -392,7 +385,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>Beroende på vilken roll du söker till kan du bli ombedd att genomföra ett personlighetstest och ett test som mäter din problemlösningsförmåga.</p>
                         </div>
                     </div>
-                    <!-- Benefit 4 -->
                     <div class="col-md-4 col-sm-4 process-item">
                         <div class="process-icon">
                             <h3>4</h3>
@@ -402,7 +394,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>Beroende på vilken roll du söker kan du bli kallad till en eller fler intervjuer för att vi ska lära känna varandra och få möjlighet att höra mer om dina erfarenheter och ambitioner.</p>
                         </div>
                     </div>
-                    <!-- Benefit 5 -->
                     <div class="col-md-4 col-sm-4 process-item">
                         <div class="process-icon">
                             <h3>5</h3>
@@ -417,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 </section>
-
+-->
 
 
 
@@ -433,32 +424,32 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 <div class="feature-section pt-3 pb-5" id="jobs-anchor" style="background-color: #eeeef2;">
 <div class="container mt-3 mb-0 m-mb-0">
-    <h2 class="my-5 m-px-2 m-my-0">Lediga <span style="font-weight: 800">jobb</span></h2>
+    <h2 class="my-5 m-px-2 m-my-0">Ledige <span style="font-weight: 800">stillinger</span></h2>
     <div class="row my-3">
         <div class="col-md-3 mb-3">
-            <label for="locationFilter">Plats</label>
+            <label for="locationFilter">Sted</label>
             <select id="locationFilter" class="form-control">
-                <option value="All">Alla platser</option>
+                <option value="All">Alle steder</option>
                 <!-- Location options will be dynamically added here -->
             </select>
         </div>
         <div class="col-md-3 mb-3">
-            <label for="jobTypeFilter">Arbetstyp</label>
+            <label for="jobTypeFilter">Stillingstype</label>
             <select id="jobTypeFilter" class="form-control">
-                <option value="All">Alla typer av jobb</option>
+                <option value="All">Alle stillingstyper</option>
                 <!-- Job type options will be dynamically added here -->
             </select>
         </div>
     </div>
     <div id="jobList" class="row"></div>
 	<div class="text-center mt-2">
-    <button id="loadMore" class="btn btn-primary">Load more</button>
+    <button id="loadMore" class="btn btn-primary">Se flere</button>
 	</div>
 </div>
 </div>
 
 
-<!-- DISABLED DUE TO POSITION UNPUBLISHED
+<!-- DISABLED DUE TO POSITION UNPUBLISHED-->
 <div class="feature-section mb-5 pb-5" id="jobs-anchor" style="background-color: #eeeef2;">
 <div class="container mb-5 m-mb-0">
     <h3 class="mb-5 m-px-2 m-mb-4">Join our <span style="font-weight: 800">talent pool</span></h3>
@@ -483,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 </div>
 </div>
- -->	
+<!-- -->	
 
 
 
@@ -494,7 +485,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-<!-- JOB AGENT DEACTIVATED
 <div class="container my-5 py-5 m-my-0 m-pt-0" style="text-align: center;">
     <div class="agent-wrapper">
         <h2>Fant du ikke stillingen for deg?</h2>
@@ -525,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('agent').addEventListener('click', function() {
-        var iframeUrl = "https://web106.reachmee.com/ext/I002/233/subscribe?site=5&lang=SE&validator=b026c105ea4a83b928726cb7cb18488c";
+        var iframeUrl = "https://web106.reachmee.com/ext/I002/223/subscribe?site=5&lang=NO&validator=9ca234355a394a0d99f3c6ffc02745f1";
         document.getElementById('modalIframe').src = iframeUrl;
         $('#exampleModal').modal('show');
     });
@@ -533,33 +523,30 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 </div>
--->
 
 
 
-<!-- FOOTER DEACTIVATED
 <section class="text-center bg-dark text-light py-5">
     <div class="container custom-footer">
-        <img src="./files/NAF-logo.jpeg" alt="NAF Logo" class="mb-3" style="max-width: 180px;">
+        <img src="./files/a2g-logo.png" alt="A2G Logo" class="mb-3" style="max-width: 180px;">
                 <div class="mt-3 mb-4" style="max-width: 600px; margin: auto;">
-		 <p style="font-size: 1.25rem;">NAF er en av Norges mest kjente organisasjoner, med over 750.000 medlemmer og kunder. Det skal vi fortsette å være fremover, og da trenger vi flere gode medarbeidere, både i Forbundet, på våre øvingsbaner og ute på NAF-sentrene!</p>
+		 <p style="font-size: 1.25rem;">A2G er en er en ledende aktør innen arbeidsinkludering i Norge. Vi samarbeider tett med NAV med et klart samfunnsoppdrag: å redusere utenforskap og skape et arbeidsliv som har plass til alle.</p>
 		</div>
         <div class="">
-            <a href="https://www.facebook.com/nafnorge"><img src="./files/TT-f.svg" alt="Icon 1" class="mx-2" style="width: 30px; height: 30px;"></a>
-            <a href="https://www.linkedin.com/company/norges-automobil-forbund/"><img src="./files/TT-l.svg" alt="Icon 2" class="mx-2" style="width: 30px; height: 30px;"></a>
-            <a href="https://www.naf.no/kundeservice" target="_blank"><img src="./files/TT-e.svg" alt="Icon 4" class="mx-2" style="width: 30px; height: 30px;"></a>
+            <a href="https://www.facebook.com/a2ggruppenas/" target="_blank"><img src="./files/TT-f.svg" alt="Icon 1" class="mx-2" style="width: 30px; height: 30px;"></a>
+            <a href="https://www.linkedin.com/company/a2g-gruppen-as/?originalSubdomain=no/" target="_blank"><img src="./files/TT-l.svg" alt="Icon 2" class="mx-2" style="width: 30px; height: 30px;"></a>
+            <a href="https://www.a2g.no/kontaktoss/" target="_blank"><img src="./files/TT-e.svg" alt="Icon 4" class="mx-2" style="width: 30px; height: 30px;"></a>
         </div>
     </div>
 </section>
 
--->
 
 
 	
 <div class="container my-0 py-1 m-py-2">
     <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
         <div>
-            <span class="mr-1">Levereras av</span>
+            <span class="mr-1">Leveres av</span>
             <img src="./files/TT-fav.svg" alt="Talentech Logo" style="width: 20px; vertical-align: middle; position: relative; bottom: 1px;">
             <span class="ml-1" style="">Talentech</span>
         </div>
@@ -639,13 +626,13 @@ $(document).ready(function () {
         });
 
         // Populate location filter
-        $('#locationFilter').html('<option value="All">Alla platser</option>');
+        $('#locationFilter').html('<option value="All">Alle steder</option>');
         locationSet.forEach(location => {
             $('#locationFilter').append(`<option value="${location}">${location}</option>`);
         });
 
         // Populate job type filter
-        $('#jobTypeFilter').html('<option value="All">Alla typer av jobb</option>');
+        $('#jobTypeFilter').html('<option value="All">Alla stillingstyper</option>');
         jobTypeSet.forEach(type => {
             $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
         });
@@ -781,7 +768,7 @@ $(document).ready(function () {
         }).addTo(map);
 
         var customIcon = L.icon({
-            iconUrl: './files/NAF-logo.jpeg',
+            iconUrl: './files/a2g-logo.png',
             iconSize: [34, 34],
             iconAnchor: [15, 30],
             popupAnchor: [1, -15]
