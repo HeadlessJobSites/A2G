@@ -3,6 +3,9 @@
 body, div, p, span, ul, li, ol, h1, h2, h3, h4, h5, h6, #position-title {
 	font-family: Inter, arial, sans-serif;
 }
+.title-alt {
+	color: #752864;
+}
 .navbar-dark.bg-dark .navbar-brand {
     visibility: inherit;
 }
