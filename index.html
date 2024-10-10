@@ -23,7 +23,7 @@
   <meta property="og:title" content="Wistrand karriärportal">
   <meta property="og:description" content="Vi söker nya perspektiv - add you.">
   <meta property="og:image" content="https://github.com/HeadlessJobSites/Wistrand/blob/main/files/CMS-Wistrand-social.jpg?raw=true">
-  <meta property="og:url" content="https://headlessjobsites.github.io/Wistrand">
+  <meta property="og:url" content="https://headlessjobsites.github.io/A2G">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wistrand karriärportal">
   <meta name="twitter:description" content="Vi söker nya perspektiv - add you.">
@@ -108,7 +108,7 @@ $(document).ready(function() {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Fetch the jobs from the feed
-  fetch('https://api.talentech.io/reachmee/feed/wistrand')
+  fetch('https://api.talentech.io/reachmee/feed/a2g')
     .then(response => response.json())
     .then(jobs => {
       const positionsCount = jobs.length; // Get the count of jobs from the feed
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="talentech-section mb-5 m-mb-3">
     <div class="container mt-4 pt-2 mb-5 pb-3 video-container m-my-0">
         <video id="talentechVideo" class="rounded-video" playsinline autoplay loop muted>
-            <source src="/Wistrand/files/ADD_film.mp4" type="video/mp4">
+            <source src="/A2G/files/ADD_film.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video><!--
         <div class="video-controls">
@@ -679,7 +679,7 @@ $(document).ready(function () {
         const organizationUnitName = job.organizations && job.organizations.length > 1 
             ? job.organizations[1].nameorgunit 
             : job.organizations?.[0]?.nameorgunit || 'Not specified';
-        const category = job.occupation_area || 'Wistrand'; // Use occupation_area or default to 'Wistrand'
+        const category = job.occupation_area || 'A2G'; // Use occupation_area or default to 'A2G'
 
         return `
         <div class="col-12 col-md-4 col-lg-4 mb-4">
@@ -709,7 +709,7 @@ $(document).ready(function () {
 
     // Function to fetch jobs from the API
     function fetchJobs() {
-        fetch('https://api.talentech.io/reachmee/feed/wistrand')
+        fetch('https://api.talentech.io/reachmee/feed/a2g')
             .then(response => response.json())
             .then(data => {
                 jobs = data; // Store fetched jobs
@@ -752,7 +752,7 @@ $(document).ready(function () {
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
     async function fetchFeed() {
-        const response = await fetch('https://api.talentech.io/reachmee/feed/wistrand');
+        const response = await fetch('https://api.talentech.io/reachmee/feed/a2g');
         return await response.json();
     }
 
