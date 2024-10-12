@@ -1,6 +1,6 @@
 .appform-wrapper {
  margin: 0 auto;
- max-with: 720px;
+ max-width: 720px;
 }
 .service-image {
      flex-shrink: 0;
@@ -116,7 +116,7 @@
  #position-title {
      font-family: Telegraf;
      font-weight: 800;
-     font-size: 4rem;
+     font-size: 3rem;
 }
  .btn-primary {
      background-color: #2f3c66;
@@ -493,6 +493,7 @@
  #inner-job-title {
      font-size: 3rem;
      line-height: 1.6;
+    font-weight: 600;
 }
  #jobTitle {
      font-weight: 800;
