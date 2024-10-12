@@ -358,19 +358,16 @@ function buildIframe() {
         <div class="carousel-item active">
             <div class="container">
                 <div class="row ">
-                    <!-- Team Member 1 -->
                     <div class="col-md-4 team-member">
 <div class="team-background-image mb-3" alt="" style="background-image: url('./files/A1080271.jpg')"></div>
                         <p class="role mb-3">Med dig ser vi nya möjligheter</p>
                         <p>Vi vet att en mångfald av kompetenser, perspektiv och erfarenheter inte bara ger en trevligare arbetsplats, utan också är en förutsättning för att ge våra klienter den bästa rådgivningen. När du börjar hos oss blir du en del av en öppen och inbjudande kultur där du får utrymme att vara dig själv – och där du kan vara trygg med att din röst blir hörd.</p>
                     </div>
-                    <!-- Team Member 2 -->
                     <div class="col-md-4 team-member">
 <div class="team-background-image mb-3" alt="" style="background-image: url('./files/A1090896.jpg')"></div>
                         <p class="role mb-3">Innovation som tradition</p>
                         <p>Vi ser innovation som en drivande faktor bakom framgång. Vår bransch förändras ständigt, och vi ser till att vara rätt rustade för framtiden genom att hitta nya och mer effektiva sätt att leverera affärsjuridiska tjänster. Det innebär att vi uppmuntrar våra medarbetare att tänka kreativt och ta initiativ, oavsett om det handlar om att använda digitala verktyg för att effektivisera arbetsflöden eller att utveckla nya tjänster som möter klienternas föränderliga behov.</p>
                     </div>
-                    <!-- Team Member 3 -->
                     <div class="col-md-4 team-member">
 <div class="team-background-image mb-3" alt="" style="background-image: url('./files/A1090755.jpg')"></div>
                         <p class="role mb-3">Hållbarhet i stort som litet</p>
@@ -537,7 +534,7 @@ window.addEventListener('message', function(event) {
     
 <div id="tt-feature-section" class="feature-section pt-3 pb-5" id="jobs-anchor" style="background-color: #eeeef2;">
 <div class="container mt-3 mb-5 m-mb-0">
-    <h2 class="my-5 m-my-0">Liknande <span style="font-weight: 800">jobb</span></h2>
+    <h2 class="my-5 m-my-0">Flere <span style="font-weight: 800">ledige stillinger</span></h2>
     <div class="row my-3">
         <div class="col-md-3 mb-3">
             <label for="locationFilter">Sted</label>
@@ -622,9 +619,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="bg-light text-dark">
     <div class="container my-0 py-1 m-py-2">
         <div class="d-flex align-items-center">
-            <span class="mr-1">Powered by</span>
+		<a href="https://talentech.no/" target="_blank">
+            <span class="mr-1">Levert av</span>
             <img src="./files/TT-fav.svg" alt="Talentech Logo" style="width: 20px; vertical-align: middle; position: relative; bottom: 1px;">
             <span class="ml-1" style="">Talentech</span>
+		</a>
         </div>
     </div>
 </section>
@@ -707,7 +706,7 @@ $(document).ready(function () {
         });
 
         if (filteredJobs.length === 0) {
-            $('#jobList').append('<div class="text-center w-100">Det er for tiden ingen liknande jobber tilgjengelig.</div>');
+            $('#jobList').append('<div class="text-center w-100">Det er for tiden ingen andre stillingsutlysninger.</div>');
         } else {
             filteredJobs.forEach(job => {
                 $('#jobList').append(buildJobCard(job));
