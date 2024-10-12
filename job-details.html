@@ -194,9 +194,10 @@ $(document).ready(function() {
 
 
     <div class="hero-section">
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="hero-video">
+    <div class="custom-hero"></div>
+        <!--<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="hero-video">
             <source src="/files/Compressed-3-TT.mp4" type="video/mp4">
-        </video>
+        </video>-->
         <div class="hero-content">
             <div class="job-title2" id="position-title"> </div>
             <p id="position-title-meta" style="font-size: 1.25rem;"><span class="organization-unit"> </span> • <span class="city"> </span></p>
@@ -456,8 +457,8 @@ function buildIframe() {
 
 
 
-<section class="process-section mb-5 m-my-0 m-pt-0 m-pb-4">
-    <h2 id="appform-header" class="container pt-5 m-px-3 m-pb-2" id="appFormWrapper"><span class="title-alt">Søknads&shy;skjema</span></h2>
+<section class="appform-wrapper process-section mb-5 m-my-0 m-pt-0 m-pb-4">
+    <h2 id="appform-header" class="container pl-0 pt-5 m-px-3 m-pb-2" id="appFormWrapper"><span class="title-alt">Søknads&shy;skjema</span></h2>
     <!-- Application form or alternative message -->
     <div id="originalContentContainer">
         <div id="applicationFormContainer"></div>
@@ -782,7 +783,7 @@ $(document).ready(function() {
                 const titleWords = job.title.split(' ');
                 const firstWord = titleWords.shift();
                 const restOfTitle = titleWords.join(' ');
-                $('.job-title').html(`<span style="font-weight:400;">${firstWord}</span> <span style="font-weight:800;">${restOfTitle}</span>`);
+                $('.job-title').html(`<span style="font-weight:400;">${firstWord}</span> <span class="title-alt">${restOfTitle}</span>`);
 
                 // Update elements with job details
                 $('.job-title2').html(job.title);
