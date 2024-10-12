@@ -1,4 +1,8 @@
- .service-image {
+.appform-wrapper {
+ margin: 0 auto;
+ max-with: 720px;
+}
+.service-image {
      flex-shrink: 0;
      position: absolute;
      right: -50px;
