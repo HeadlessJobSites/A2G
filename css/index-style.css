@@ -756,10 +756,10 @@ h4 {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.talentech-section h2,.talentech-section p {
+	/*.talentech-section h2,.talentech-section p {
 		padding-left: 100px;
 		padding-right: 150px;
-	}
+	}*/
 }
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav .nav-link {
