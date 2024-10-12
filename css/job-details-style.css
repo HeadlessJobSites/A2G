@@ -54,6 +54,38 @@
 	font-style: normal;
 	font-display: swap;
 }
+.service-image {
+    flex-shrink: 0;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.service-image img {
+    height: 200px; 
+    width: auto;
+}
+.service-box {
+    background-color: #FFF8E1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    border-radius: 3px;
+}
+.service-content {
+    flex: 1;
+    max-width: 70%;
+}
+.leaflet-container a {
+    color: #000 !important;
+}
+.leaflet-popup-content {
+    margin: 20px !important;
+}
+.job-details .hero-section {
+    background-color: #005560;
+}
 .hero-section {
 	position: relative;
 	height: 100vh;
@@ -100,6 +132,8 @@
 	transform: translateY(-50%);
 	color: white;
     	z-index: 2;
+  	max-width: 1200px;
+    	margin: 0 auto;
 }
 .job-listing {
 	margin-bottom: 20px;
@@ -239,6 +273,32 @@ h2 {
 	display: block;
 }
 @media (max-width: 768px) {
+    .quicklinks.apply-btn {
+    width: 100%;
+    }   
+    .company-logo {
+        height: 18px;
+    }
+    .service-image {
+        position: static;
+        transform: none;
+        margin-bottom: 20px; 
+        order: 1;
+    }
+    .service-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto; 
+    }
+    .service-content {
+        max-width: 100%;
+        order: 2;
+    }
+    .service-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 20px 40px;
+    }
 	.team-member {
 		flex: 0 0 70%;
 		max-width: 70%;
@@ -472,7 +532,9 @@ h2 {
 }
 }
 .team-section .container {
-	max-width: 1200px;
+    max-width: 1600px;
+    background: #062e2a;
+    color: rgb(233, 243, 230);
 }
 .team-section .row {
 	display: flex;
@@ -777,12 +839,12 @@ font-size: 1.8rem;
     }
 }
 @media (max-width: 992px) {
-    /*.navbar.bg-dark {  
-animation: fadeIn 2s; 
-}*/
 a.nav-link.btn.btn-primary.apply-btn {  
         font-size: 1em !important;
 }
+    .mobile-only {
+        justify-content: right;
+    }
 }
 .navbar.bg-dark .nav-link.apply-btn {  
         font-size: 1em;
