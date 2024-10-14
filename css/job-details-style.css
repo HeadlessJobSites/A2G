@@ -400,8 +400,6 @@
 }
  .team-section .container {
      max-width: 1600px;
-     background: #062e2a;
-     color: rgb(233, 243, 230);
 }
  .team-section .row {
      display: flex;
