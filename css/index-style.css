@@ -189,7 +189,7 @@ h2 {
 }
 .background-image {
 	background-size: cover;
-	background-position: center;
+	background-position: top center;
 	min-height: 400px;
 	border-radius: 15px;
 }
@@ -339,7 +339,7 @@ h2 {
 	height: auto;
 }
 .quote-section {
-	background-color: #005560;
+	background-color: #2f3c66;
 	color: #fff;
 	padding: 60px 20px;
 }
@@ -501,7 +501,7 @@ h4 {
 .benefit-icon {
 	position: relative;
 	margin-bottom: -50px;
-	background-color: #005560;
+	background-color: #2f3c66;
 	color: #f8f9fa;
 	border-radius: 50%;
 	width: 100px;
