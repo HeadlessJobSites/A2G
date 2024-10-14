@@ -656,6 +656,9 @@
  .navbar-dark i.fa-thin.fa-arrow-down{
      margin-left: 6px;
 }
+     .talentech-section h1 {
+         font-size: 30px;
+     }
  @media (min-width: 992px) {
      .navbar-expand-lg .navbar-nav {
          background: rgb(0,0,0,0.5);
@@ -667,7 +670,7 @@
          padding-right: 1rem;
          padding-left: 1rem;
     }
-     .talentech-section h2,.talentech-section p, .talentech-section ul, .talentech-section ol, .talentech-section h3, .talentech-section h4, .talentech-section h5, .talentech-section h6 {
+     .talentech-section h2, .talentech-section h1, .talentech-section p, .talentech-section ul, .talentech-section ol, .talentech-section h3, .talentech-section h4, .talentech-section h5, .talentech-section h6 {
          padding-left: 210px;
          padding-right: 260px;
          line-height: 1.6;
