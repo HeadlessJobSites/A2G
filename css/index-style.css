@@ -339,8 +339,7 @@ h2 {
 	height: auto;
 }
 .quote-section {
-	background-color: #2f3c66;
-	color: #fff;
+	background-color: #f8f9fa;
 	padding: 60px 20px;
 }
 .quote-section .container {
@@ -351,11 +350,10 @@ h2 {
 	font-size: 40px;
 	font-weight: 700;
 	line-height: 1.5;
-	color: #fefffe;
 }
 .blockquote-footer {
-	color: #fefffe;
 	font-size: 20px;
+    color: #2f3c66;
 }
 .team-section .container {
 	max-width: 1200px;
