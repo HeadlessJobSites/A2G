@@ -613,14 +613,18 @@ h4 {
     transition: transform 0.3s ease-out;
   }
   .testimonials-modal.fade.show .testimonials-modal-dialog {
-        transform: translate(0, 30%);
+    transform: translateY(0%); /* Adjust this to align the modal as needed */
   }
   .testimonials-modal-content {
     border-radius: 0.3rem 0.3rem 0 0; /* Rounded corners at the top */
+    height: 100%; /* Ensures the modal content uses the full height */
+    display: flex;
+    flex-direction: column; /* Helps manage the layout of the header and body */
   }
-.testimonials-modal .modal-dialog {
-    margin: 0vh auto;
-}
+  .testimonials-modal-body {
+    overflow-y: auto; /* Allows scrolling */
+    flex-grow: 1; /* Takes up all available space not used by the header */
+  }
 
 .modal-fullscreen-90w {
 	padding-right: 0 !important;
