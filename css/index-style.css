@@ -783,10 +783,10 @@ h4 {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.testimonials-modal-content h3, .testimonials-modal-content p {
-		padding-left: 100px;
-		padding-right: 150px;
-	}
+    .testimonials-modal-body .container {
+        padding-left: 100px;
+        padding-right: 150px;
+    }
 }
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav .nav-link {
