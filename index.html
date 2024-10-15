@@ -917,25 +917,6 @@ $(document).ready(function() {
 });
 </script>
 
-<!-- FIXES TESTIMONIAL GAP BOTTOM ON MOBILE -->
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-    const adjustModal = () => {
-        const modalElement = document.querySelector('.testimonials-modal-dialog');
-        if (modalElement) {
-            modalElement.style.height = `calc(${window.innerHeight}px * 0.75 - 10px)`; // 75% of innerHeight
-        }
-    };
-
-    // Initial adjust
-    adjustModal();
-
-    // Adjust on resize or orientation change
-    window.addEventListener('resize', adjustModal);
-    window.addEventListener('orientationchange', adjustModal);
-});
-
-	</script>
 	
 	
 </body>
