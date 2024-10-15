@@ -613,11 +613,14 @@ h4 {
     transition: transform 0.3s ease-out;
   }
   .testimonials-modal.fade.show .testimonials-modal-dialog {
-    transform: translateY(0%); /* This moves the modal to align its bottom with the bottom of the screen */
+        transform: translate(0, 30%);
   }
   .testimonials-modal-content {
     border-radius: 0.3rem 0.3rem 0 0; /* Rounded corners at the top */
   }
+.testimonials-modal .modal-dialog {
+    margin: 0vh auto;
+}
 
 .modal-fullscreen-90w {
 	padding-right: 0 !important;
