@@ -629,6 +629,12 @@ h4 {
     overflow-y: auto; /* Allows scrolling */
     flex-grow: 1; /* Takes up all available space not used by the header */
   }
+.testimonials-modal-dialog .modal-header {
+	position: absolute;
+}
+  .testimonials-modal-dialog .background-image {
+	flex-grow: 1;
+  }
 
 .modal-fullscreen-90w {
 	padding-right: 0 !important;
