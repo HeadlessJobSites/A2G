@@ -779,7 +779,17 @@ h4 {
 
 
 
-
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    /* Keep hover effects for non-touch devices */
+  }
+}
+@media (hover: none) {
+  .btn-primary:hover {
+    background-color: initial; /* or match the non-hover state */
+    color: initial; /* Adjust as necessary */
+  }
+}
 @media (min-width: 768px) {
 	.benefits-section h4 div {
 		max-width: 540px;
