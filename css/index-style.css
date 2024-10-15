@@ -613,7 +613,7 @@ h4 {
     transition: transform 0.3s ease-out;
   }
   .testimonials-modal.fade.show .testimonials-modal-dialog {
-    transform: translateY(0%); /* Adjust this to align the modal as needed */
+    transform: translateY(0, 30%); /* Adjust this to align the modal as needed */
   }
   .testimonials-modal-content {
     border-radius: 0.3rem 0.3rem 0 0; /* Rounded corners at the top */
