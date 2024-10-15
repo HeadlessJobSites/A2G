@@ -172,7 +172,7 @@ h1 {
 	padding: 0.6rem 1.5rem;
 	color: #fff;
 }
-..btn-secondary {
+.btn-secondary {
 	background-color: #e3e6f2;
 	border: 0;
 	border-radius: 4px;
@@ -646,6 +646,9 @@ h4 {
   .testimonials-modal-dialog .background-image {
 	flex-grow: 1;
   }
+.testimonials-modal-dialog .testimonial-height {
+	min-height: 540px;
+}
 
 .modal-fullscreen-90w {
 	padding-right: 0 !important;
@@ -817,6 +820,9 @@ h4 {
 @media (max-width: 768px) {
 	body, p {
 		font-size: 0.9rem;
+	}
+	.testimonials-modal-dialog .testimonial-height {
+		min-height: 400px;
 	}
 	.benefits-section h4 .values-heading {
 		font-size: 1.25rem;
