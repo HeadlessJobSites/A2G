@@ -906,7 +906,7 @@ $(document).ready(function () {
 
 
 
-<!-- FIXES DOUBLE TAP FOR 'LES MER' TESTIMONIAL BUTTON. -->
+<!-- FIXES DOUBLE TAP FOR 'LES MER' TESTIMONIAL BUTTON -->
 	<script>
 $(document).ready(function() {
     // Handling touchstart separately to avoid the mobile double-tap issue
@@ -917,6 +917,25 @@ $(document).ready(function() {
 });
 </script>
 
+<!-- FIXES TESTIMONIAL GAP BOTTOM ON MOBILE -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+    const adjustModal = () => {
+        const modalElement = document.querySelector('.testimonials-modal-dialog');
+        if (modalElement) {
+            modalElement.style.height = `calc(${window.innerHeight}px * 0.75 - 10px)`; // 75% of innerHeight
+        }
+    };
+
+    // Initial adjust
+    adjustModal();
+
+    // Adjust on resize or orientation change
+    window.addEventListener('resize', adjustModal);
+    window.addEventListener('orientationchange', adjustModal);
+});
+
+	</script>
 	
 	
 </body>
