@@ -379,12 +379,14 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 <script>
 $(document).ready(function() {
-    // Binding click event to the button that triggers the modal
-    $('.btn[data-target="#testimonialsModal"]').on('click', function() {
+    // Handling touchstart separately to avoid the mobile double-tap issue
+    $('.btn[data-target="#testimonialsModal"]').on('touchstart', function(e) {
+        e.preventDefault(); // Prevents the default click behavior on touch
         $('#testimonialsModal').modal('show');
     });
 });
 </script>
+
 
 
 	
