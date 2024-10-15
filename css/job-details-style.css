@@ -703,7 +703,7 @@
     }
      .mobile-only {
          display: flex !important;
-         justify-content: center;
+         justify-content: right;
          width: 100%;
     }
      .mobile-only .nav-link {
