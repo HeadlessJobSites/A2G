@@ -617,7 +617,7 @@ h4 {
     transition: transform 0.3s ease-out;
   }
   .testimonials-modal.fade.show .testimonials-modal-dialog {
-        transform: translate(0, 20%);
+        transform: translate(0, 7%);
    }
   .testimonials-modal-content {
     border-radius: 0.3rem 0.3rem 0 0; 
