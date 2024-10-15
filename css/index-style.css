@@ -779,17 +779,7 @@ h4 {
 
 
 
-@media (hover: hover) and (pointer: fine) {
-  .btn-primary:hover {
-    /* Keep hover effects for non-touch devices */
-  }
-}
-@media (hover: none) {
-  .btn-primary:hover {
-    background-color: initial; /* or match the non-hover state */
-    color: initial; /* Adjust as necessary */
-  }
-}
+
 @media (min-width: 768px) {
 	.benefits-section h4 div {
 		max-width: 540px;
@@ -831,6 +821,19 @@ h4 {
 	}
 }
 @media (max-width: 768px) {
+	.testimonials-modal-dialog {
+    position: fixed;      /* Fixed position relative to the viewport */
+    bottom: 0;            /* Align the bottom edge of the modal with the bottom of the viewport */
+    left: 0;              /* Align the left edge of the modal with the left of the viewport */
+    width: 100%;          /* The modal should take full viewport width */
+    height: 75vh;         /* The modal should cover 75% of the viewport height from the bottom */
+    transition: transform 0.3s ease-out;  /* Smooth transition for any transforms */
+}
+
+.testimonials-modal.fade.show .testimonials-modal-dialog {
+    transform: translateY(0%); /* Ensures the modal is fully visible when active */
+}
+
 	body, p {
 		font-size: 0.9rem;
 	}
