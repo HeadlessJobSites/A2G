@@ -602,16 +602,23 @@ h4 {
 .gs-m {
 	display: none;
 }
-.testimonials-modal-dialog {
-transform: translate(0, 100%);
-transition: transform 0.3s ease-out;
-}
-.testimonials-modal.fade.show .testimonials-modal-dialog {
-transform: translate(0, -25%);  /* Adjust this value to control how much the modal should slide up */
-}
-.testimonials-modal-content {
-border-radius: 0.3rem;
-}
+
+  .testimonials-modal-dialog {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0; /* This makes the modal full width, adjust as necessary */
+    height: 75vh; /* Adjust the height of the modal */
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+  }
+  .testimonials-modal.fade.show .testimonials-modal-dialog {
+    transform: translateY(0%); /* This moves the modal to align its bottom with the bottom of the screen */
+  }
+  .testimonials-modal-content {
+    border-radius: 0.3rem 0.3rem 0 0; /* Rounded corners at the top */
+  }
+
 .modal-fullscreen-90w {
 	padding-right: 0 !important;
 }
