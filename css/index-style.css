@@ -599,6 +599,10 @@ h4 {
 	color: #ffcfcd !important;
 	font-size: 20px;
 }
+.close {
+    font-size: 2.5rem;
+    opacity: .6;
+}
 .gs-m {
 	display: none;
 }
@@ -613,13 +617,13 @@ h4 {
     transition: transform 0.3s ease-out;
   }
   .testimonials-modal.fade.show .testimonials-modal-dialog {
-        transform: translate(0, 30%);
+        transform: translate(0, 20%);
    }
   .testimonials-modal-content {
-    border-radius: 0.3rem 0.3rem 0 0; /* Rounded corners at the top */
-    height: 100%; /* Ensures the modal content uses the full height */
+    border-radius: 0.3rem 0.3rem 0 0; 
+    height: 100%; 
     display: flex;
-    flex-direction: column; /* Helps manage the layout of the header and body */
+    flex-direction: column; 
   }
   .testimonials-modal-body {
     overflow-y: auto; /* Allows scrolling */
@@ -779,10 +783,10 @@ h4 {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	/*.talentech-section h2,.talentech-section p {
+	.testimonials-modal-content h3, .testimonials-modal-content p {
 		padding-left: 100px;
 		padding-right: 150px;
-	}*/
+	}
 }
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav .nav-link {
