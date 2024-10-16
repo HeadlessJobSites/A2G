@@ -1088,8 +1088,8 @@ h4 {
 	.blockquote p {
 		font-size: 25px;
 	}
-	.blockquote-footer,.blockquote p {
-		font-size: 1rem;
+	.blockquote p {
+		font-size: 1.5rem;
 		font-weight: 500;
 	}
 	.blockquote-footer::before {
