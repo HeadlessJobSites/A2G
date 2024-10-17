@@ -791,8 +791,8 @@ h4 {
 }
 
 .navbar-collapse {
-    justify-content: center;  /* Centers navbar items */
-    flex-grow: 0;  /* Prevents navbar from taking up unnecessary space */
+    flex-grow: 0;  /* Ensures it doesn't stretch beyond its content size */
+    align-items: center; /* Aligns the items vertically */
 }
 
 .navbar-nav {
@@ -803,9 +803,9 @@ h4 {
 
 .navbar-right {  /* Assuming this is your class for the right-side button */
     display: flex;
-    justify-content: flex-end;  /* Aligns the button to the right */
-    align-items: center;
-    padding-right: 10px;  /* Adds padding on the right side */
+    justify-content: flex-end; /* This should already align the button to the right */
+    flex: 1;  /* Ensure it has space to move to the right */
+    padding-right: 15px;  /* Add padding to match the overall navbar padding */
 }
 
 .nav-link {
@@ -813,7 +813,8 @@ h4 {
 }
 
 .btn-outline-primary {
-    margin-right: 0;  /* Adjust right margin for the button if necessary */
+    margin: 0;  /* Removes any margin */
+    padding: 5px 10px; /* Adjust padding as needed */
 }
 
 
@@ -845,7 +846,7 @@ h4 {
 }
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav {
-		background: rgb(0,0,0,0.5);
+		/*background: rgb(0,0,0,0.5);*/
 		border-radius: 4px;
 		padding-left: 15px;
 		padding-right: 15px;
