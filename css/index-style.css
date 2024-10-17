@@ -797,8 +797,8 @@ h4 {
 
 .navbar-nav {
     display: flex;
-    justify-content: center;  /* Center the links */
-    align-items: center;  /* Vertically align the links */
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .navbar-right {  /* Assuming this is your class for the right-side button */
@@ -843,6 +843,9 @@ h4 {
 	.background-image {
 		margin-bottom: 20px;
 	}
+    .navbar-nav {
+        justify-content: flex-end; 
+    }
 }
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav {
