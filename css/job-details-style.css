@@ -489,7 +489,7 @@
      font-weight: 800;
 }
  .bg-dark {
-     background-color: #2f3c66 !important;
+     background-color: #A50287 !important;
 }
  #inner-job-title {
      font-size: 3rem;
@@ -511,7 +511,7 @@
      display: block;
 }
  .apply-btn {
-     background-color: #2f3c66 !important;
+     background-color: #A50287 !important;
      color: white !important;
      border: none;
      text-decoration: none !important;
@@ -699,7 +699,7 @@
          margin-bottom: 20px;
     }
      .navbar {
-         background-color: #2f3c66 !important;
+         background-color: #A50287 !important;
     }
      .mobile-only {
          display: flex !important;
