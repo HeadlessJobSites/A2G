@@ -781,48 +781,53 @@ h4 {
 }
 
 .contact-card {
-    background-image: url('/files/Pattern-1.jpg');
-    background-size: cover;
+    background: #fff;
     border-radius: 30px;
     margin-bottom: 20px;
     overflow: hidden;
     position: relative;
 }
 
-.contact-card::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: inherit;
-    border-radius: 50% / 100%;
+.profile-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    padding-top: 100%; /* Maintain aspect ratio */
+    background-size: cover;
 }
 
 .profile-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: block;
-    border-bottom: 5px solid #fff; /* This creates a visual separation */
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 5px solid #fff; /* Visual separation */
 }
 
 .contact-info {
-    padding: 15px;
+    padding: 15px 15px 15px 15px; /* Adjusted padding */
     text-align: center; /* Center align the text */
+    background: #fff; /* Ensure background overlaps the image slightly */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.contact-info h4 {
-    margin-top: 10px;
-}
-
-.contact-info p {
-    margin: 5px 0;
+.contact-info h4, .contact-info p {
     color: #666;
+    margin: 0; /* Remove margins for alignment */
+    padding: 0 5px; /* Padding inside the overlay */
 }
 
 .contact-info i {
     margin-right: 5px;
 }
+
+/* Additional styles for icons and overlay */
+
 
 
 
