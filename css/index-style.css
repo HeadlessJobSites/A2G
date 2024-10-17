@@ -774,7 +774,6 @@ h4 {
 
 
 
-
 .contact-persons {
     padding: 20px;
     color: #333;
@@ -789,29 +788,27 @@ h4 {
 }
 
 .profile-image {
-    height: 200px; /* Adjusted height to prevent stretching */
+    height: 200px; /* Set a fixed height */
     background: url('/files/Pattern-1.jpg') no-repeat center center;
     background-size: cover;
     border-radius: 10px 10px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .profile-image img {
-    height: 100%; /* Adjust height to fill the container without stretching */
+    height: 100%;
+    width: 100%;  /* Adjust width to be 100% */
     object-fit: cover;
-    width: auto;
 }
 
 .contact-info {
-    padding: 15px 10%; /* Padding with percentage for responsive handling */
+    padding: 15px; /* Uniform padding */
     text-align: center;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background: #fff; /* Solid white background */
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    height: 100px; /* Fixed height for contact info */
     border-radius: 0 0 10px 10px;
 }
 
@@ -823,8 +820,6 @@ h4 {
 .contact-info i {
     margin-right: 5px;
 }
-
-
 
 
 
