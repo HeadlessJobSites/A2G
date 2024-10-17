@@ -168,14 +168,14 @@ h1 {
 .btn-primary, .btn-secondary:hover {
 	background-color: #A50287;
 	border: 0;
-	border-radius: 4px;
+	border-radius: 50px;
 	padding: 0.6rem 1.5rem;
 	color: #fff;
 }
 .btn-secondary {
 	background-color: #ffffff;
 	border: 0;
-	border-radius: 4px;
+	border-radius: 50px;
 	padding: 0.6rem 1.5rem;
 	color: #A50287;
 }
@@ -188,7 +188,7 @@ h1 {
 }
 .rounded-img {
 	width: 100%;
-	border-radius: 4px;
+	border-radius: 20px;
 	margin-top: 20px;
 }
 h2 {
@@ -198,7 +198,7 @@ h2 {
 	background-size: cover;
 	background-position: top center;
 	min-height: 400px;
-	border-radius: 4px;
+	border-radius: 20px;
 }
 .text-padding {
 	padding: 40px;
@@ -238,7 +238,7 @@ h2 {
 	box-sizing: border-box;
 }
 .team-member img {
-	border-radius: 4px;
+	border-radius: 20px;
 	margin-bottom: 20px;
 	width: 100%;
 	height: auto;
@@ -295,7 +295,7 @@ h2 {
 }
 .team-background-image {
 	background-size: cover;
-	border-radius: 4px;
+	border-radius: 20px;
 	background-position: -100px;
 	border-radius: 10px;
 	margin-bottom: 20px;
@@ -313,7 +313,7 @@ h2 {
 	background-color: #f8f9fa;
 }
 .rounded-img {
-	border-radius: 4px;
+	border-radius: 20px;
 	width: 100%;
 	height: auto;
 }
@@ -340,7 +340,7 @@ h2 {
 	padding: 20px;
 }
 .rounded-img {
-	border-radius: 4px;
+	border-radius: 20px;
 	width: 100%;
 	max-width: 100%;
 	height: auto;
@@ -414,7 +414,7 @@ h2 {
 }
 .benefit-content {
 	background-color: #f8f9fa;
-	border-radius: 4px;
+	border-radius: 20px;
 }
 .process-content p {
 	margin-bottom: 0;
@@ -562,7 +562,7 @@ h4 {
 }
 .rounded-video {
 	width: 100%;
-	border-radius: 4px;
+	border-radius: 20px;
 	overflow: hidden;
 }
 .gobi-stories-container {
@@ -742,7 +742,7 @@ h4 {
 }
 .navbar.bg-dark .navbar-nav {
 	background: transparent;
-	border-radius: 4px;
+	border-radius: 20px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -1118,7 +1118,7 @@ h4 {
 		height: 250px;
 		background-size: cover;
 		background-position: center;
-		border-radius: 4px;
+		border-radius: 20px;
 		margin-bottom: 20px;
 	}
 	.carousel-control-prev, .carousel-control-next {
