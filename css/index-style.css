@@ -75,7 +75,7 @@ a {
 	visibility: inherit;
 }
 .bg-dark {
-	background-color: #2f3c66 !important;
+	background-color: #A50287 !important;
 }
 .bg-dark p {
 	color: #fff;
@@ -84,7 +84,7 @@ a {
 	bottom: 30px;
 }
 .dark-btn {
-	background: #2f3c66 !important;
+	background: #A50287 !important;
 }
 .btn-group-lg>.btn, .btn-lg {
     font-size: 1rem;
@@ -166,18 +166,18 @@ h1 {
 	margin-bottom: 2rem;
 }
 .btn-primary, .btn-secondary:hover {
-	background-color: #2f3c66;
+	background-color: #A50287;
 	border: 0;
 	border-radius: 4px;
 	padding: 0.6rem 1.5rem;
 	color: #fff;
 }
 .btn-secondary {
-	background-color: #e3e6f2;
+	background-color: #ffffff;
 	border: 0;
 	border-radius: 4px;
 	padding: 0.6rem 1.5rem;
-	color: #2f3c66;
+	color: #A50287;
 }
 .btn-primary:hover {
 	background-color: #1e2642;
@@ -507,7 +507,7 @@ h4 {
 .benefit-icon {
 	position: relative;
 	margin-bottom: -50px;
-	background-color: #2f3c66;
+	background-color: #A50287;
 	color: #f8f9fa;
 	border-radius: 50%;
 	width: 100px;
