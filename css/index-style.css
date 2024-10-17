@@ -771,25 +771,26 @@ h4 {
 	margin-right: 2px;
 }
 
-.navbar .container {
+
+
+
+/* Ensuring full width and proper alignment */
+.navbar .container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
-.navbar-collapse {
-    flex-grow: 0;
-}
-.navbar-brand, .navbar-toggler {
-    flex-grow: 1;
-}
+
 .navbar-nav {
-    justify-content: center;
-    width: 100%;
+    flex-grow: 1; /* Allows the navbar-nav to take available space and center links */
+    justify-content: center; /* Centers the navigation links */
 }
 
+.navbar-collapse {
+    flex-grow: inherit; /* Inherits the flex properties to ensure correct alignment */
+}
 
-
+/* Additional adjustments may be needed based on actual site design */
 
 
 
@@ -814,9 +815,6 @@ h4 {
 	.background-image {
 		margin-bottom: 20px;
 	}
-    .navbar-collapse {
-        justify-content: center;
-    }
 }
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav {
