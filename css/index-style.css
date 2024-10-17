@@ -773,6 +773,52 @@ h4 {
 }
 
 
+.contact-persons {
+    background-image: url('/Pattern-1.jpg');
+    padding: 20px;
+    color: #333;
+}
+.contact-card {
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: inherit;
+    border-radius: 50% / 100%;
+}
+.profile-image img {
+    width: 100%;
+    display: block;
+    border-bottom: 5px solid #fff; /* This creates a visual separation */
+}
+.contact-info {
+    padding: 15px;
+    text-align: center; /* Center align the text */
+}
+.contact-info h4 {
+    margin-top: 10px;
+}
+.contact-info p {
+    margin: 5px 0;
+    color: #666;
+}
+.contact-info i {
+    margin-right: 5px;
+}
+
+
+
+
+
 
 .navbar {
     padding: 10px;
