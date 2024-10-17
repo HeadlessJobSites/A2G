@@ -771,6 +771,22 @@ h4 {
 	margin-right: 2px;
 }
 
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.navbar-collapse {
+    flex-grow: 0;
+}
+.navbar-brand, .navbar-toggler {
+    flex-grow: 1;
+}
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
 
 
 
@@ -798,6 +814,9 @@ h4 {
 	.background-image {
 		margin-bottom: 20px;
 	}
+    .navbar-collapse {
+        justify-content: center;
+    }
 }
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav {
