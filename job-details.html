@@ -121,41 +121,44 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
+
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.0);">
-    <div class="container m-py-0">
-        <a class="navbar-brand" href="./" aria-label="Hjem">
-            <img src="./files/A2G-new-logo-light.png" height="50" class="d-inline-block align-top company-logo" alt="">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./">
+            <img src="./files/A2G-new-logo-light.png" height="50" class="d-inline-block align-top" alt="">
         </a>
-        <div class="d-flex justify-content-end align-items-center flex-grow-1">
-            <a class="nav-link ml-auto d-lg-none btn btn-primary apply-btn m-mr-2" href="#appform-header">Søk her</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="d-flex d-lg-none my-2 mobile-only">
-            <!--<a class="nav-link new-link mr-1" href="#meet-the-team">Møt de ansatte <i class="fa-thin fa-arrow-down"></i></a>-->
-            <a class="nav-link new-link ml-1" href="#meet-the-team">Møt de ansatte <i class="fa-thin fa-arrow-down"></i></a>
-        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="./">Hjem <span class="sr-only">(current)</span></a>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.a2g.no/om-a2g/">Om A2G</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#appform-header">Søk her</a>
-                </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link" href="#company-values">Våre verdier</a>
-                </li>-->
-                <li class="nav-item">
-                    <a class="nav-link" href="#meet-employees">Møt de ansatte</a>
+                    <a class="nav-link" target="_blank" href="https://www.a2g.no/virksomheter/">Virksomheter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="blank" href="https://a2g.no/">a2g.no <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" target="_blank" href="https://a2gkompetanse.no/arbeidsmarkedstiltak/">Våre arbeidsmarkedstiltak</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./#jobs-anchor">Stillinger</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./#meet-employees">Møt de ansatte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://web106.reachmee.com/ext/I002/223/profile?site=5&validator=9ca234355a394a0d99f3c6ffc02745f1&lang=NO">Logg inn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="blank" href="https://a2g.no/">a2g.no</a>
                 </li>
             </ul>
         </div>
+        <div class="navbar-nav navbar-right d-none d-lg-flex"> 
+            <a class="btn btn-secondary mr-2" href="./#jobs-anchor">Ledige stillinger</a>
+        <a class="btn btn-primary" href="https://www.a2g.no/kontaktoss/">Kontakt oss</a></div>
     </div>
 </nav>
 
@@ -412,7 +415,7 @@ function buildIframe() {
                 <h3 style="font-size: 24px;font-weight: 800;">Heidi Svedal Sellevold</h3>
 				<p><strong>Jobbveileder</strong></p>
 				<p>Hvis du trives med å møte sårbare mennesker og bidra i deres liv, så er dette en fantastisk og spennende jobb. A2G gir oss muligheten til å jobbe tett med jobbsøkere med ulik bakgrunn, og det å kunne være en del av deres vei mot en bedre fremtid er utrolig givende. Jeg ser daglig hvordan vårt arbeid direkte påvirker jobbsøkernes liv ved å gi dem verktøyene og støtten de trenger for å overvinne utfordringer og oppnå sine mål.</p>
-		<button type="button" class="btn" data-toggle="modal" data-target="#testimonialsModal">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#testimonialsModal">
 		  Les mer
 		</button>
             </div>
