@@ -782,7 +782,7 @@ h4 {
 
 .contact-card {
     background: #fff;
-    border-radius: 30px;
+    border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
     position: relative;
@@ -792,7 +792,7 @@ h4 {
     position: relative;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
-    padding-top: 100%; /* Maintain aspect ratio */
+    height: 220px; /* Adjusted height to better control the size of the image */
     background-size: cover;
 }
 
@@ -802,31 +802,29 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-bottom: 5px solid #fff; /* Visual separation */
+    object-fit: cover; /* Ensures the image covers the area without being distorted */
 }
 
 .contact-info {
-    padding: 15px 15px 15px 15px; /* Adjusted padding */
+    padding: 15px;
     text-align: center; /* Center align the text */
     background: #fff; /* Ensure background overlaps the image slightly */
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 10%; /* Small indent from the sides */
+    right: 10%; /* Small indent from the sides */
+    border-radius: 0 0 10px 10px; /* Rounds only the bottom corners */
+    box-shadow: 0 -10px 15px rgba(0,0,0,0.1); /* Optional: Adds depth with a shadow */
 }
 
 .contact-info h4, .contact-info p {
     color: #666;
-    margin: 0; /* Remove margins for alignment */
-    padding: 0 5px; /* Padding inside the overlay */
+    margin: 5px 0; /* Adjusted for better spacing */
 }
 
 .contact-info i {
     margin-right: 5px;
 }
-
-/* Additional styles for icons and overlay */
 
 
 
