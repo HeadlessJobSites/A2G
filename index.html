@@ -57,16 +57,10 @@
                     <a class="nav-link" target="_blank" href="https://a2gkompetanse.no/arbeidsmarkedstiltak/">Våre arbeidsmarkedstiltak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./#jobs-anchor">Stillinger</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="./#meet-employees">Møt de ansatte</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://web106.reachmee.com/ext/I002/223/profile?site=5&validator=9ca234355a394a0d99f3c6ffc02745f1&lang=NO">Logg inn</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="blank" href="https://a2g.no/">a2g.no</a>
                 </li>
             </ul>
         </div>
@@ -82,23 +76,27 @@
 
 <script>
 $(document).ready(function() {
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 56) {
-      $(".navbar").addClass("bg-dark");
-    } else {
-      $(".navbar").removeClass("bg-dark");
-    }
-  });
-  $(".navbar-toggler").click(function() {
-    if (!$(".navbar-collapse").hasClass("show")) {
-      $(".navbar").addClass("bg-dark");
-    } else {
-      if ($(window).scrollTop() < 56) {
-        $(".navbar").removeClass("bg-dark");
-      } else {
-      }
-    }
-  });
+    $('.navbar-nav a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 56) {
+            $(".navbar").addClass("bg-dark");
+        } else {
+            $(".navbar").removeClass("bg-dark");
+        }
+    });
+
+    $(".navbar-toggler").click(function() {
+        if (!$(".navbar-collapse").hasClass("show")) {
+            $(".navbar").addClass("bg-dark");
+        } else {
+            if ($(window).scrollTop() < 56) {
+                $(".navbar").removeClass("bg-dark");
+            }
+        }
+    });
 });
 </script>
 
@@ -109,7 +107,7 @@ $(document).ready(function() {
         <source src="/files/a2g_velferdsstaten.mp4" type="video/mp4">
     </video>-->
     <div class="hero-content">
-        <h1>Jobb hos <span style="font-weight: 800;">oss!</span></h1>
+        <h1>Jobb hos <span style="font-weight: 800; color: #A50287 !important">oss!</span></h1>
         <a href="#jobs-anchor" class="btn btn-primary btn-lg dark-btn"><strong>Se ledige stillinger</strong></a>
     </div>
 	</div>
