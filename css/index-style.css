@@ -775,20 +775,47 @@ h4 {
 
 
 /* Ensuring full width and proper alignment */
+.navbar {
+    padding: 0 10px;  /* Adjust padding for outer edges if needed */
+}
+
 .navbar .container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
-.navbar-nav {
-    flex-grow: 1; /* Allows the navbar-nav to take available space and center links */
-    justify-content: center; /* Centers the navigation links */
+.navbar-brand, .navbar-nav, .navbar-right {
+    flex: 1;  /* Each section takes equal space */
 }
 
 .navbar-collapse {
-    flex-grow: inherit; /* Inherits the flex properties to ensure correct alignment */
+    justify-content: center;  /* Centers navbar items */
+    flex-grow: 0;  /* Prevents navbar from taking up unnecessary space */
 }
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;  /* Center the links */
+    align-items: center;  /* Vertically align the links */
+}
+
+.navbar-right {  /* Assuming this is your class for the right-side button */
+    display: flex;
+    justify-content: flex-end;  /* Aligns the button to the right */
+    align-items: center;
+    padding-right: 10px;  /* Adds padding on the right side */
+}
+
+.nav-link {
+    margin: 0 5px;  /* Adjust spacing between links */
+}
+
+.btn-outline-primary {
+    margin-right: 0;  /* Adjust right margin for the button if necessary */
+}
+
 
 /* Additional adjustments may be needed based on actual site design */
 
