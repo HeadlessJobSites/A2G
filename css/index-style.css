@@ -62,14 +62,15 @@ body {
 	color: #4c505b;
 }
 h2 {
-    font-weight: 700;
+    	font-weight: 700;
+	color: #1d274e;
 }
 a {
-    	color: #2f3c66;
+    	color: #A50287;
     	font-weight: 500;
 }
 .title-alt {
-	color: #752864;
+	color: #A50287;
 }
 .navbar-dark.bg-dark .navbar-brand {
 	visibility: inherit;
@@ -356,12 +357,12 @@ h2 {
 .blockquote p {
 	font-size: 40px;
 	font-weight: 700;
-	color: #2f3c66;
+	color: #000;
 	line-height: 1.5;
 }
 .blockquote-footer {
 	font-size: 20px;
-    color: #2f3c66;
+    color: #000;
 }
 .team-section .container {
 	max-width: 1140px;
