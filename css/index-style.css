@@ -903,7 +903,7 @@ h4 {
 }
 .footer-bg-dark h4 {
     color: #fff;
-    margin-bottom: 15px;  /* Add more space below headers */
+    margin-bottom: 25px;  /* Add more space below headers */
 }
 .footer-bg-dark {
     background-color: #222;
@@ -912,11 +912,12 @@ h4 {
 }
 
 .footer-logo-section, .footer-links, .footer-business, .footer-contact-info {
-    padding: 20px;
+    padding: 50px;
 }
 
 .footer-logo {
     width: 100%;  /* Full width within its container */
+	max-width: 300px;
 }
 
 .footer-description {
@@ -934,7 +935,7 @@ h4 {
     color: #fff;
     text-decoration: none;
     display: block;  /* Make links block to occupy full width of li */
-    margin-bottom: 5px;  /* Space between each link */
+    margin-bottom: 16px;  /* Space between each link */
 }
 
 .footer-social-icon, .contact-icon {
@@ -943,10 +944,13 @@ h4 {
     vertical-align: middle;  /* Align icons with text vertically */
     margin-right: 5px;  /* Space between icon and text */
 }
-
+.footer-social-icon {
+    width: 40px;
+    height: 40px;
+}
 .footer-contact-info p, .footer-contact-info a {
     display: block;  /* Each info in its own line */
-    margin-bottom: 5px;  /* Space between contact details */
+    margin-bottom: 18px;  /* Space between contact details */
 }
 
 
