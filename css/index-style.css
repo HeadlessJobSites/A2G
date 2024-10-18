@@ -895,17 +895,21 @@ h4 {
 
 
 
+
+
+
+
 .footer-bg-dark {
-    background-color: #222; /* Dark background */
+    background-color: #222;
     color: #fff;
 }
 
-.footer-logo-section, .footer-links, .footer-contact-info {
+.footer-logo-section, .footer-links, .footer-business, .footer-contact-info {
     padding: 20px;
 }
 
 .footer-logo {
-    width: 120px; /* Adjust size as necessary */
+    width: 120px;
 }
 
 .footer-description {
@@ -914,30 +918,31 @@ h4 {
     margin-bottom: 20px;
 }
 
-.footer-links ul {
+.footer-links ul, .footer-business ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-links ul li a {
-    color: #fff; /* Ensure link colors are visible */
+.footer-links ul li a, .footer-business ul li a {
+    color: #fff;
     text-decoration: none;
 }
 
-.footer-social-icon {
-    width: 30px; /* Set social icon size */
+.footer-social-icon, .contact-icon {
+    width: 30px;
     height: 30px;
     margin-top: 10px;
 }
 
-.footer-contact-info h4, .footer-links h4 {
-    color: #fff;
+.footer-contact-info h4, .footer-links h4, .footer-business h4 {
     font-size: 1.25rem;
 }
 
 .footer-contact-info p, .footer-contact-info a {
     font-size: 1rem;
-    color: #ddd; /* Slightly lighter text for readability */
+    color: #ddd;
+    display: inline;
+    vertical-align: middle;
 }
 
 
