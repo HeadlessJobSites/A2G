@@ -895,6 +895,55 @@ h4 {
 
 
 
+.footer-bg-dark {
+    background-color: #222; /* Dark background */
+    color: #fff;
+}
+
+.footer-logo-section, .footer-links, .footer-contact-info {
+    padding: 20px;
+}
+
+.footer-logo {
+    width: 120px; /* Adjust size as necessary */
+}
+
+.footer-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: #fff; /* Ensure link colors are visible */
+    text-decoration: none;
+}
+
+.footer-social-icon {
+    width: 30px; /* Set social icon size */
+    height: 30px;
+    margin-top: 10px;
+}
+
+.footer-contact-info h4, .footer-links h4 {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.footer-contact-info p, .footer-contact-info a {
+    font-size: 1rem;
+    color: #ddd; /* Slightly lighter text for readability */
+}
+
+
+
+
+
 
 
 @media (min-width: 768px) {
