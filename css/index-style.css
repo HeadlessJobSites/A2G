@@ -898,10 +898,17 @@ h4 {
 
 
 
-
+.footer-bg-dark p, .footer-bg-dark a {
+    color: #d0d5d9 !important;  /* Ensure text color consistency */
+}
+.footer-bg-dark h4 {
+    color: #fff;
+    margin-bottom: 15px;  /* Add more space below headers */
+}
 .footer-bg-dark {
     background-color: #222;
     color: #fff;
+    font-size: 1rem;  /* Uniform font size across the footer */
 }
 
 .footer-logo-section, .footer-links, .footer-business, .footer-contact-info {
@@ -909,42 +916,38 @@ h4 {
 }
 
 .footer-logo {
-    width: 120px;
+    width: 100%;  /* Full width within its container */
 }
 
 .footer-description {
-    font-size: 1rem;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;  /* Space between description and social icon */
 }
 
 .footer-links ul, .footer-business ul {
     list-style: none;
     padding: 0;
+    margin: 0;  /* Remove default margin */
 }
 
 .footer-links ul li a, .footer-business ul li a {
     color: #fff;
     text-decoration: none;
+    display: block;  /* Make links block to occupy full width of li */
+    margin-bottom: 5px;  /* Space between each link */
 }
 
 .footer-social-icon, .contact-icon {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-.footer-contact-info h4, .footer-links h4, .footer-business h4 {
-    font-size: 1.25rem;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;  /* Align icons with text vertically */
+    margin-right: 5px;  /* Space between icon and text */
 }
 
 .footer-contact-info p, .footer-contact-info a {
-    font-size: 1rem;
-    color: #ddd;
-    display: inline;
-    vertical-align: middle;
+    display: block;  /* Each info in its own line */
+    margin-bottom: 5px;  /* Space between contact details */
 }
-
 
 
 
