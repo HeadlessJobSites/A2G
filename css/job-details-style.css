@@ -1,4 +1,15 @@
-.contact-persons {
+.contact-persons-job {
+    padding: 20px;
+    color: #333;
+}
+.contact-persons-job h3, .contact-persons-job h3 span {
+    text-align: center;
+    font-weight: 800 !important;
+}
+.contact-persons-job h3 {
+    margin-bottom: 15px;
+}
+.contact-persons-job {
     display: flex;
     justify-content: center; /* Center the contact cards horizontally */
     flex-wrap: wrap; /* Allows wrapping if screen is too small */
