@@ -14,11 +14,9 @@
     justify-content: center; /* Center the contact cards horizontally */
     flex-wrap: wrap; /* Allows wrapping if screen is too small */
 }
-
 .contact-card {
     margin: 10px; /* Space between cards */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
-    border-radius: 10px; /* Rounded corners for aesthetics */
+    border-radius: 30px; /* Rounded corners for aesthetics */
     overflow: hidden; /* Ensures no overflow */
 }
 
@@ -30,23 +28,22 @@
 }
 
 .profile-image img {
+    padding-top: 20px;
     height: 100%;
     width: 100%;
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
-
 .contact-info {
-    background: #fff;
+    background: #f8f8f8;
     text-align: center;
     padding: 15px;
 }
 
 .contact-info-inner {
     margin-top: -50px; /* Pulls the contact info upwards over the image */
-    background: #fff;
+    background: #f8f8f8;
     width: calc(100% - 30px); /* Adjusts width to allow for padding */
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Optional: adds subtle shadow for depth */
 }
 
 h4, p {
@@ -767,6 +764,12 @@ h4, p {
     }
 }
  @media (max-width: 768px) {
+     .profile-image {
+    height: 300px;
+     }
+     .contact-card {
+    width: 100%;
+}
      .quicklinks.apply-btn {
          width: 100%;
     }
