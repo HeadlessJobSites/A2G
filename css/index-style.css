@@ -787,6 +787,12 @@ h4 {
     position: relative;
 }
 
+.contact-card h3, .contact-card h3 span {
+    text-align: center;
+    font-weight: 700;
+    font-weight: 700;
+}
+
 .profile-image {
     height: 250px; /* Set a fixed height */
     background: url('/files/Pattern-1.jpg') no-repeat center center;
@@ -807,7 +813,6 @@ h4 {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
     border-radius: 0 0 10px 10px;
 	position: relative;
 }
@@ -819,11 +824,16 @@ h4 {
     background: #fff;
     position: relative;
     z-index: 2;
-    border-radius: 10px;
+    border-radius: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
+.contact-info-inner h4 {
+    font-weight: 600;
+}
+.contact-info-inner * {
+    color: #A50287 !important;
+}
 .contact-info h4, .contact-info p {
     color: #666;
     margin: 5px 0;
