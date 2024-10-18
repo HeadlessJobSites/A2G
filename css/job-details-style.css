@@ -1,3 +1,48 @@
+.contact-persons {
+    display: flex;
+    justify-content: center; /* Center the contact cards horizontally */
+    flex-wrap: wrap; /* Allows wrapping if screen is too small */
+}
+
+.contact-card {
+    margin: 10px; /* Space between cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.profile-image {
+    height: 200px;
+    width: 100%; /* Ensures the image container is fully wide */
+    background-size: cover;
+    background-position: center center; /* Center the background pattern */
+}
+
+.profile-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.contact-info {
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact-info-inner {
+    margin-top: -50px; /* Pulls the contact info upwards over the image */
+    background: #fff;
+    width: calc(100% - 30px); /* Adjusts width to allow for padding */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Optional: adds subtle shadow for depth */
+}
+
+h4, p {
+    margin: 5px 0; /* Reduces gap between text elements */
+}
+
+
 .appform-wrapper {
  margin: 0 auto;
  max-width: 720px;
