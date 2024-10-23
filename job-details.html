@@ -945,14 +945,15 @@ $(document).ready(function () {
         }
         updateLoadMoreVisibility();
     }
-	
+
+    function buildJobCard(job) {
+	    
         // Determine the display location based on the areas and country
         let displayLocation = job.country || '';
         if (job.areas && job.areas.length > 0) {
             displayLocation = job.areas[job.areas.length - 1].name; // Use the last area
         }
-
-    function buildJobCard(job) {
+	    
         const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
         return `
             <div class="col-12 col-md-4 col-lg-4 mb-4">
