@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card-body">
 		        <div class="card-category"><span>General</span></div>
                 <div class="card-title">Unsolicited application</div>
-                <p class="card-text">Talentech</p>
+                <p class="card-text">A2G</p>
 			    <a href="/job-details.html?open-application" class="stretched-link">
                 <img src="./files/arrow-right-thin.svg" class="stretched-link" alt="Details" style="">
 		</a>
@@ -808,6 +808,13 @@ $(document).ready(function () {
     }
 
     function buildJobCard(job) {
+
+        // Determine the display location based on the areas and country
+        let displayLocation = job.country || '';
+        if (job.areas && job.areas.length > 0) {
+            displayLocation = job.areas[job.areas.length - 1].name; // Use the last area
+        }
+	    
         const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
         return `
         <div class="col-12 col-md-6 col-lg-6 mb-4">
@@ -816,7 +823,7 @@ $(document).ready(function () {
                     <div class="card-body">
                         <div class="card-category"><span>${job.occupation_area || 'A2G'}</span></div>
                         <div class="card-title">${job.title}</div>
-                        <p class="card-text">${job.country}</p>
+                        <p class="card-text">${displayLocation}</p>
                         <a href="${jobDetailUrl}" class="stretched-link">
                             <img src="./files/arrow-right-thin.svg" class="stretched-link" alt="Details">
                         </a>
