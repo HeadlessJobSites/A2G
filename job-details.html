@@ -945,6 +945,12 @@ $(document).ready(function () {
         }
         updateLoadMoreVisibility();
     }
+	
+        // Determine the display location based on the areas and country
+        let displayLocation = job.country || '';
+        if (job.areas && job.areas.length > 0) {
+            displayLocation = job.areas[job.areas.length - 1].name; // Use the last area
+        }
 
     function buildJobCard(job) {
         const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
@@ -955,7 +961,7 @@ $(document).ready(function () {
                         <div class="card-body">
                             <div class="card-category"><span>${job.occupation_area || 'Ikke spesifisert'}</span></div>
                             <div class="card-title">${job.title}</div>
-                            <p class="card-text">${job.country}</p>
+                            <p class="card-text">${displayLocation}</p>
                         </div>
                     </div>
                 </a>
